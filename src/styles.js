@@ -236,6 +236,7 @@ export const CardReposStyle = styled.div`
     border-radius: 5px;
     font-size: 1.10rem;
     width: 200px;
+    cursor: pointer;
 `;
 
 export const LoginStyle = styled.form`
@@ -308,11 +309,16 @@ export const ModalStyle = styled.div`
         border-radius: 5px;
         height: auto;
         color: #000;
-        padding: 1.3rem;        
+        padding: 1.3rem;   
+        text-align: left;     
     }
 
     p {
         margin-bottom: 0.6rem;
+    }
+
+    button{
+        margin-top: 1.2rem;
     }
 
     button.close {
@@ -322,9 +328,11 @@ export const ModalStyle = styled.div`
         margin-left: auto;
         display: block;
         cursor: pointer;
+        margin-top: 0rem;
     }
 
     h2{
         text-align: center;
+        margin-bottom: 1.2rem;
     }
 `;
