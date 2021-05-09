@@ -56,13 +56,37 @@ export const HeaderStyle = styled.div`
     box-shadow: 1px 0px 8px 5px rgb(0, 0, 0, 0.5);
     color: #fff;
     padding: 0rem 1.5rem;
+    text-align: center;
 
     p{
         margin-bottom: 0.1rem;
+        font-size: 1.2rem;
     }
 
     img{
         width: 50px;
+    }
+
+    span{
+        font-size: 0.85rem;
+
+        button{
+            background: transparent;
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            padding: 0.3rem 0.5rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: .2s;
+
+            &:hover {
+                border: 1px solid rgba(255, 255, 255, 0.9);
+            }
+
+            i.icon{
+                margin: 0;
+            }
+        }
     }
 `;
 
@@ -212,6 +236,53 @@ export const CardReposStyle = styled.div`
     border-radius: 5px;
     font-size: 1.10rem;
     width: 200px;
+`;
+
+export const LoginStyle = styled.form`
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    padding: 1.6rem;
+    border-radius: 5px;
+    border: 1px solid gray;
+    box-shadow: 0px 0px 14px 2px grey;
+
+    h2{
+        text-align: center;
+        margin-bottom: 0rem;
+    }
+
+    hr{
+        width: 80%;
+        height: 1.18px;
+        border: none;
+        margin-bottom: 2rem;
+        background-color: transparent;
+        background-image: linear-gradient(to left,rgba(0,0,0,0),rgb(51, 102, 51),rgba(0,0,0,0)) !important;
+    }
+
+    input {
+        border: 1px solid gray;
+        border-radius: 60rem;
+        padding: 0.6rem 0.8rem;
+        margin-bottom: 1.5rem;
+        transition:.2s;
+    }
+
+    input:focus, input:active {
+        outline: none;
+        box-shadow: 0px 0px 5px 1px #363;
+    }
+
+    button{
+        padding: 0.6rem 1.7rem;
+    }
+
+    span{
+        margin-bottom: 1.5rem;
+        color: red;
+        text-align: center;
+    }
 `;
 
 export const ModalStyle = styled.div`
