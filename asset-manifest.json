@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.js": "/req-api-github/static/js/main.5b8cf7d8.chunk.js",
+    "main.js.map": "/req-api-github/static/js/main.5b8cf7d8.chunk.js.map",
+    "runtime-main.js": "/req-api-github/static/js/runtime-main.abde1b75.js",
+    "runtime-main.js.map": "/req-api-github/static/js/runtime-main.abde1b75.js.map",
+    "static/css/2.aefa290c.chunk.css": "/req-api-github/static/css/2.aefa290c.chunk.css",
+    "static/js/2.95da37f2.chunk.js": "/req-api-github/static/js/2.95da37f2.chunk.js",
+    "static/js/2.95da37f2.chunk.js.map": "/req-api-github/static/js/2.95da37f2.chunk.js.map",
+    "static/js/3.d8cf5da7.chunk.js": "/req-api-github/static/js/3.d8cf5da7.chunk.js",
+    "static/js/3.d8cf5da7.chunk.js.map": "/req-api-github/static/js/3.d8cf5da7.chunk.js.map",
+    "index.html": "/req-api-github/index.html",
+    "static/css/2.aefa290c.chunk.css.map": "/req-api-github/static/css/2.aefa290c.chunk.css.map",
+    "static/js/2.95da37f2.chunk.js.LICENSE.txt": "/req-api-github/static/js/2.95da37f2.chunk.js.LICENSE.txt",
+    "static/media/semantic.min.css": "/req-api-github/static/media/outline-icons.ddae9b1b.woff",
+    "static/media/icone.0599a0c2.png": "/req-api-github/static/media/icone.0599a0c2.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.abde1b75.js",
+    "static/css/2.aefa290c.chunk.css",
+    "static/js/2.95da37f2.chunk.js",
+    "static/js/main.5b8cf7d8.chunk.js"
+  ]
+}
