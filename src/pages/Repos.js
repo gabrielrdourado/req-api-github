@@ -1,9 +1,14 @@
 import React, {useState, useEffect} from 'react';
 import { api } from '../services/api';
 
+import Header from '../components/Header';
+import CardRepo from '../components/CardRepo';
+
+import { ReposList } from '../styles';
+
 export default function Repos(props) {
     const [userRepos, setUserRepos] = useState('');
-    const [error, setError] = useState('');
+    const [errorMsg, setErrorMsg] = useState('');
     const currentUser =`${props.match.params.handle}`;
     
     useEffect( ()  => {
@@ -14,11 +19,11 @@ export default function Repos(props) {
                 setUserRepos(result.data);
                 
                 if (result.data.length === 0) {
-                  setError('Não foi possível encontrar repositórios para este usuário');
+                  setErrorMsg('Não foi encontrado repositórios para este usuário');
                 }
             } catch (exception) {
                 setUserRepos('');
-                setError('Ouve um erro na requisição dos repositórios');
+                setErrorMsg('Erro na requisição dos repositórios');
             }
         }
         Fetch();
@@ -26,18 +31,23 @@ export default function Repos(props) {
 
     return (
         <div>
-            <div>Repositórios</div>
-            <ul>
-                {
-                    (userRepos.length > 0 ? (userRepos.map((repo)=>{
-                        return(
-                            <li key={repo.id}>
-                                <p>{repo.name}</p>
-                            </li>
-                        );
-                    })) : (<span>{error}</span>))
-                }      
-            </ul> 
+            <Header/>
+            <main style={{height: "auto"}}>
+                <ReposList>
+                    <h2>Repositórios</h2>
+                    <ul>
+                        {
+                            (userRepos.length > 0 ? (userRepos.map((repo)=>{
+                                return(
+                                    <li key={repo.id}>
+                                        <CardRepo Repo={repo}/>
+                                    </li>
+                                );
+                            })) : (<span>{errorMsg}</span>))
+                        }      
+                    </ul> 
+                </ReposList>
+            </main>
         </div>
     );
 }

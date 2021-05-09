@@ -6,10 +6,12 @@ import {BrowserRouter} from 'react-router-dom';
 import 'semantic-ui-css/semantic.min.css';
 
 import Routes from './Routes';
+import { GlobalStyles } from './styles';
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
+      <GlobalStyles />
       <Routes></Routes>
     </BrowserRouter>
   </React.StrictMode>,

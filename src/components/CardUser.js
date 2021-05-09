@@ -1,47 +1,51 @@
 import React from 'react';
 
 import { Icon } from 'semantic-ui-react';
-import { format, parseISO } from "date-fns";
-import ptBR from "date-fns/locale/pt-BR";
 import { Link } from 'react-router-dom';
+import Dataconvert from '../services/Dataconvert';
+import { CardUserStyle, PrimaryButton } from '../styles';
 
 export default function CardUser(props){
+    const user = props.user
+
     return (        
-        <div>
-            <img src={props.user.avatar_url} alt={props.user.name} />
-            <h1>
-                {props.user.name}
-            </h1>
-            <div>
+        <CardUserStyle>
+            <div className="container">
+                <img src={user.avatar_url} alt={user.name} />
+            </div>            
+            <div className="card-header">
+                <h3>
+                    {user.name}
+                </h3>
                 <span>
                     Data de registro: &nbsp;
-                    {format(parseISO(props.user.created_at), 'dd/MM/yyyy', {locale: ptBR})}
+                    {Dataconvert(user.created_at)}
                 </span>
             </div>
-            <div>
-                <p>Repositórios Públicos</p>
-                <span>{props.user.public_repos}</span>
-                
-                <Link to={`/repos/${props.user.login}`}>
-                    Acessar &nbsp;<Icon name="chevron right"/>
+            <div className="card-body">
+                <h5>Repositórios Públicos</h5>
+                <Link to={`/repos/${user.login}`}>
+                    <PrimaryButton>
+                    <span>{user.public_repos}&nbsp;</span><Icon name="chevron right"/>
+                    </PrimaryButton>
                 </Link>
             </div>
-            <div>
+            <div className="card-details">
                 <div>
                     <p>Seguidores</p>
                     <span>
-                        {props.user.followers} &nbsp;
+                        {user.followers} &nbsp;
                         <Icon name="user"/>
                     </span>
                 </div>
                 <div>
                     <p>Seguindo</p>
                     <span>
-                        {props.user.following} &nbsp;
+                        {user.following} &nbsp;
                         <Icon name="user"/>
                     </span>
                 </div>
             </div>
-        </div>        
+        </CardUserStyle>        
     );
 }
