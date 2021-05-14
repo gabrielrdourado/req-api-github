@@ -288,9 +288,9 @@ export const LoginStyle = styled.form`
 
 export const ModalStyle = styled.div`
     width: 100%;
-    height: 100vh;
+    height: 100%;
 
-    position: absolute;
+    position: fixed;
     z-index:10;
     left: 0;
     top: 0;
